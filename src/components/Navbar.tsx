@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/90 shadow-sm backdrop-blur-md py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <a href="#" className="flex items-center">
-          <span className="text-primary-DEFAULT text-xl font-poppins font-bold">AI Scholar</span>
+          <span className="text-xl font-poppins font-bold\nbg-gradient-to-r from-[#C1F25D] to-[#A4D147] text-transparent bg-clip-text\ntext-primary-DEFAULT">AI Scholar</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
