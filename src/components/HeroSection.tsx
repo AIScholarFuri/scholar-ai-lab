@@ -21,9 +21,7 @@ const HeroSection: React.FC = () => {
           
           <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-2xl animate-fade-in" style={{
           animationDelay: '0.2s'
-        }}>
-            Whether you're a founder, student or creator — AI School makes it easy to stay ahead.
-          </p>
+        }}>Whether you're a founder, student or creator — AI Scholar makes it easy to stay ahead.</p>
           
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{
           animationDelay: '0.4s'
