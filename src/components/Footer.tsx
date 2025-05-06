@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-50 py-16">
+  return <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -26,24 +23,15 @@ const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div>
-            <h3 className="text-primary font-bold mb-4">Courses</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">AI Fundamentals</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Prompt Engineering</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">AI for Business</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Creative AI</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">All Courses</a></li>
-            </ul>
-          </div>
+          
           
           <div>
             <h3 className="text-primary font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Blog</a></li>
+              
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Community</a></li>
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">AI Tools Directory</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Learning Paths</a></li>
+              
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
@@ -54,7 +42,7 @@ const Footer: React.FC = () => {
             <form>
               <div className="flex">
                 <input type="email" placeholder="Your email address" className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
-                <button type="submit" className="px-4 py-2 rounded-r-lg transition-colors text-slate-50 bg-[#c1f25d]">
+                <button type="submit" className="px-4 py-2 rounded-r-lg transition-colors bg-[#c1f25d] text-inherit">
                   Subscribe
                 </button>
               </div>
@@ -74,8 +62,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
