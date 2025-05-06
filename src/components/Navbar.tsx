@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="text-primary hover:text-accent transition-colors">About</a>
-          <a href="#courses" className="text-primary hover:text-accent transition-colors">Courses</a>
+          
           <a href="#tools" className="text-primary hover:text-accent transition-colors">AI Tools</a>
           <a href="#community" className="text-primary hover:text-accent transition-colors">Community</a>
           <a href="#blog" className="text-primary hover:text-accent transition-colors">Blog</a>
