@@ -61,11 +61,11 @@
   }
   
   .primary-button {
-    @apply bg-accent text-primary-DEFAULT font-medium px-6 py-3 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+    @apply bg-accent text-primary font-medium px-6 py-3 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
   }
   
   .secondary-button {
-    @apply bg-white border border-primary-DEFAULT text-primary-DEFAULT font-medium px-6 py-3 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
+    @apply bg-white border border-primary text-primary font-medium px-6 py-3 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
   }
   
   .reveal {
@@ -81,7 +81,7 @@
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl mb-6 text-primary-DEFAULT;
+    @apply text-4xl md:text-5xl lg:text-6xl mb-6 text-primary;
   }
   
   .section-subtitle {
