@@ -27,7 +27,7 @@ const CommunitySection: React.FC = () => {
               You don't have to do it alone. Our community supports you across every stage of your career.
               Founders, builders, professionals — all leveling up together.
             </p>
-            <a href="#" className="primary-button inline-block">Join the AI School Community</a>
+            <a href="#" className="primary-button inline-block">Join the AI Scholar Community</a>
           </div>
           
           <div className="lg:w-1/2">
