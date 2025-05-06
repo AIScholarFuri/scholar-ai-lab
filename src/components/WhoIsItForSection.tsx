@@ -38,7 +38,7 @@ const WhoIsItForSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
-              title: 'Founders',
+              title: 'Startup Founders',
               icon: 'user',
               description: 'Harness AI to scale operations and innovate faster'
             },
@@ -48,12 +48,12 @@ const WhoIsItForSection: React.FC = () => {
               description: 'Learn skills that make you stand out in tomorrow\'s job market'
             },
             {
-              title: 'Creators',
+              title: 'Business Owners',
               icon: 'images',
-              description: 'Amplify your creativity and production capabilities'
+              description: 'Drive growth with smart AI decisions'
             },
             {
-              title: 'Professionals',
+              title: 'Working Professionals',
               icon: 'briefcase',
               description: 'Stay relevant and embrace the future of your industry'
             }
@@ -64,7 +64,7 @@ const WhoIsItForSection: React.FC = () => {
               style={{ animationDelay: `${0.1 * index}s` }}
             >
               <div className="bg-primary-accent/20 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                <div className="text-primary-DEFAULT">
+                <div className="text-primary">
                   {item.icon === 'user' && (
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                   )}
@@ -79,7 +79,7 @@ const WhoIsItForSection: React.FC = () => {
                   )}
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-primary-DEFAULT">{item.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-primary">{item.title}</h3>
               <p className="text-gray-600">{item.description}</p>
             </div>
           ))}

@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -36,10 +37,11 @@ const AboutSection: React.FC = () => {
             </p>
           </div>
           
-          <div className="md:w-1/2">
-            <div className="glass-card p-4 md:p-8 rounded-2xl h-[400px] overflow-hidden">
-              {/* Placeholder for about section image */}
-              <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952')] bg-cover bg-center rounded-lg"></div>
+          <div className="md:w-1/2 w-full">
+            <div className="glass-card p-4 md:p-8 rounded-2xl overflow-hidden">
+              <AspectRatio ratio={16/9}>
+                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952')] bg-cover bg-center rounded-lg"></div>
+              </AspectRatio>
             </div>
           </div>
         </div>
