@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
@@ -15,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 180 95% 10%; /* Updated to match #01312d */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -24,8 +25,8 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 90 100% 37%; /* Updated to match #72bf00 */
+    --accent-foreground: 180 95% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -56,7 +57,7 @@
   }
   
   h1, h2, h3, h4, h5 {
-    @apply font-poppins font-bold;
+    @apply font-poppins font-bold text-primary;
   }
 
   /* Fix for mobile viewport issues */
@@ -126,35 +127,5 @@
     box-sizing: border-box; /* Ensure padding is included in width calculation */
   }
   
-  @media (min-width: 640px) {
-    .container {
-      max-width: 640px;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1280px;
-    }
-  }
-  
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1536px;
-    }
-  }
+  /* ... keep existing code */
 }
