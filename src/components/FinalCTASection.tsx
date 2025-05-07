@@ -1,4 +1,7 @@
+
 import React from 'react';
+import { WhatsappIcon } from './icons/WhatsappIcon';
+
 const FinalCTASection: React.FC = () => {
   return <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -13,9 +16,18 @@ const FinalCTASection: React.FC = () => {
             Take the first step toward mastering AI. Our courses provide practical skills that will transform your career and vision.
           </p>
           
-          <a href="#courses" className="primary-button text-lg px-8 py-4">Join Free Community</a>
+          <a 
+            href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="primary-button text-lg px-8 py-4 inline-flex items-center gap-2"
+          >
+            <WhatsappIcon className="w-5 h-5" />
+            Join Free Community
+          </a>
         </div>
       </div>
     </section>;
 };
+
 export default FinalCTASection;

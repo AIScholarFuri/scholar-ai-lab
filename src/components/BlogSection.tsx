@@ -145,7 +145,7 @@ const BlogSection: React.FC = () => {
 
         <div className="mt-12 text-center">
           <a 
-            href="https://medium.com/@furiai2025/ai-scholar-c94aa6994707" 
+            href="https://medium.com/@furiai2025" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="primary-button inline-block"
