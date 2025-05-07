@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/90 shadow-sm backdrop-blur-md py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <a href="#" className="flex items-center">
-          <img alt="AI Scholar Logo" src="/lovable-uploads/c08e1f71-c2f4-49da-a28c-3127f8200af4.png" className="h-64 mr-2 object-none" />
+          <img alt="AI Scholar Logo" src="/lovable-uploads/c08e1f71-c2f4-49da-a28c-3127f8200af4.png" className="h-50 mr-2 object-contain" />
           
         </a>
         
