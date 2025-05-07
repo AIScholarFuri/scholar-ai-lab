@@ -43,8 +43,6 @@ const CoursesSection: React.FC = () => {
       }
     };
   }, []);
-  return <section id="courses" className="py-20 md:py-28">
-      
-    </section>;
+  return;
 };
 export default CoursesSection;
