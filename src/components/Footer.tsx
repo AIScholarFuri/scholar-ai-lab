@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             <form>
               <div className="flex">
                 <input type="email" placeholder="Your email address" className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
-                <button type="submit" className="px-4 py-2 rounded-r-lg transition-colors bg-[#c1f25d] text-inherit">
+                <button type="submit" className="px-4 py-2 rounded-r-lg transition-colors text-inherit bg-primary-accent">
                   Subscribe
                 </button>
               </div>
