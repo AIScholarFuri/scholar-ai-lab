@@ -20,6 +20,11 @@ const Navbar: React.FC = () => {
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/90 shadow-sm backdrop-blur-md py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <a href="#" className="flex items-center">
+          <img 
+            src="/public/lovable-uploads/2e9c9938-6ca3-42c7-8a2c-78aabab1ed0a.png" 
+            alt="AI Scholar Logo" 
+            className="h-10 mr-2"
+          />
           <span className="text-primary text-xl font-poppins font-bold">AI Scholar</span>
         </a>
         

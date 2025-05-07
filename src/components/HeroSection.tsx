@@ -1,4 +1,7 @@
+
 import React from 'react';
+import { WhatsappIcon } from './icons/WhatsappIcon';
+
 const HeroSection: React.FC = () => {
   return <section className="min-h-screen relative flex items-center pt-16" id="hero">
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -26,10 +29,22 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{
           animationDelay: '0.4s'
         }}>
-            <a href="#contact" className="primary-button">
+            <a 
+              href="https://wa.me/919154442611" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="primary-button inline-flex items-center gap-2"
+            >
+              <WhatsappIcon className="w-5 h-5" />
               Chat with Us
             </a>
-            <a href="#community" className="secondary-button">
+            <a 
+              href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="secondary-button inline-flex items-center gap-2"
+            >
+              <WhatsappIcon className="w-5 h-5" />
               Join Free Community
             </a>
           </div>
