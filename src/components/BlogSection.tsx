@@ -1,37 +1,54 @@
-import React, { useEffect, useRef } from 'react';
-interface BlogPost {
-  id: number;
+
+import React, { useEffect, useRef, useState } from 'react';
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+interface MediumPost {
   title: string;
-  excerpt: string;
-  image: string;
-  date: string;
+  link: string;
+  pubDate: string;
+  thumbnail: string;
+  description: string;
   author: string;
 }
-const blogPosts: BlogPost[] = [{
-  id: 1,
-  title: "The Future of AI in Education: Beyond Chatbots",
-  excerpt: "How AI tools are revolutionizing personalized learning pathways and reshaping educational approaches.",
-  image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-  date: "May 1, 2025",
-  author: "Emma Thompson"
-}, {
-  id: 2,
-  title: "Prompt Engineering: The New Digital Literacy",
-  excerpt: "Why the ability to effectively communicate with AI systems is becoming an essential skill.",
-  image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-  date: "April 25, 2025",
-  author: "Michael Rivera"
-}, {
-  id: 3,
-  title: "Building Your AI Stack: Essential Tools for Creators",
-  excerpt: "A comprehensive guide to the AI tools every content creator needs in their workflow.",
-  image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-  date: "April 18, 2025",
-  author: "Sarah Chen"
-}];
+
 const BlogSection: React.FC = () => {
+  const [posts, setPosts] = useState<MediumPost[]>([]);
+  const [loading, setLoading] = useState(true);
   const sectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    const fetchMediumPosts = async () => {
+      try {
+        // Using a proxy service to avoid CORS issues with Medium's RSS feed
+        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@furiai2025`);
+        const data = await response.json();
+
+        if (data.status === 'ok') {
+          // Get the first 4 posts
+          const mediumPosts = data.items.slice(0, 4).map((item: any) => ({
+            title: item.title,
+            link: item.link,
+            pubDate: new Date(item.pubDate).toLocaleDateString('en-US', { 
+              month: 'short', 
+              day: 'numeric', 
+              year: 'numeric' 
+            }),
+            thumbnail: item.thumbnail || extractImageFromContent(item.content),
+            description: extractExcerpt(item.content),
+            author: item.author
+          }));
+          setPosts(mediumPosts);
+        }
+      } catch (error) {
+        console.error("Error fetching Medium posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMediumPosts();
+
+    // Intersection observer for revealing animation
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('reveal-visible');
@@ -39,38 +56,106 @@ const BlogSection: React.FC = () => {
     }, {
       threshold: 0.1
     });
+    
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+    
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  return <section id="blog" className="py-20 md:py-28 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-8">
+
+  // Helper function to extract excerpt from Medium post content
+  const extractExcerpt = (content: string) => {
+    // Remove HTML tags and extract first 120 characters
+    const plainText = content.replace(/<[^>]+>/g, '');
+    return plainText.substring(0, 120) + '...';
+  };
+
+  // Helper function to extract first image from content if thumbnail is missing
+  const extractImageFromContent = (content: string) => {
+    const imgMatch = content.match(/<img[^>]+src="([^"]+)"[^>]*>/);
+    return imgMatch ? imgMatch[1] : 'https://placehold.co/600x400/e0e0e0/818181?text=AI+Scholar';
+  };
+
+  return (
+    <section id="blog" className="py-20 md:py-28 bg-gray-50 relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-16 reveal" ref={sectionRef}>
-          <h2 className="section-title">Latest Insights from AI Scholar</h2>
+          <h2 className="section-title">Stay Sharp with the Latest in AI</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay up-to-date with the latest trends, tools, and techniques in AI education.
+            Real insights, zero fluff. Read lessons, trends, and ideas from our AI School editors and community.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map(post => <div key={post.id} className="glass-card overflow-hidden hover:-translate-y-2 transition-all duration-300">
-              <div className="h-48 overflow-hidden">
-                <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="glass-card h-80 animate-pulse">
+                <div className="h-40 bg-gray-200 rounded-t-xl"></div>
+                <div className="p-6">
+                  <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div className="h-3 bg-gray-200 rounded mb-2 w-full"></div>
+                  <div className="h-3 bg-gray-200 rounded mb-2 w-5/6"></div>
+                  <div className="h-3 bg-gray-200 rounded w-4/6"></div>
+                </div>
               </div>
-              <div className="p-6">
-                <div className="text-sm text-gray-500 mb-2">{post.date} • {post.author}</div>
-                <h3 className="text-xl font-bold mb-2 text-primary">{post.title}</h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <a href="#" className="text-primary font-medium hover:underline">Read more →</a>
-              </div>
-            </div>)}
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {posts.map((post, index) => (
+              <Card 
+                key={index} 
+                className="glass-card overflow-hidden hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={post.thumbnail} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://placehold.co/600x400/e0e0e0/818181?text=AI+Scholar';
+                    }}
+                  />
+                </div>
+                <CardContent className="flex-grow p-6">
+                  <div className="text-sm text-gray-500 mb-2">{post.pubDate}</div>
+                  <h3 className="text-xl font-bold mb-2 text-primary line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
+                </CardContent>
+                <CardFooter className="px-6 pb-6 pt-0">
+                  <a 
+                    href={post.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-primary font-medium hover:underline"
+                  >
+                    Read more →
+                  </a>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-12 text-center">
+          <a 
+            href="https://medium.com/@furiai2025/ai-scholar-c94aa6994707" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="primary-button inline-block"
+          >
+            View All Articles
+          </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default BlogSection;
