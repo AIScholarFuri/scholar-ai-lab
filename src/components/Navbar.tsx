@@ -1,12 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { WhatsappIcon } from './icons/WhatsappIcon';
-
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -16,16 +13,11 @@ const Navbar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/90 shadow-sm backdrop-blur-md py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <a href="#" className="flex items-center">
-          <img 
-            src="/public/lovable-uploads/2e9c9938-6ca3-42c7-8a2c-78aabab1ed0a.png" 
-            alt="AI Scholar Logo" 
-            className="h-10 mr-2"
-          />
-          <span className="text-primary text-xl font-poppins font-bold">AI Scholar</span>
+          <img alt="AI Scholar Logo" src="/lovable-uploads/c08e1f71-c2f4-49da-a28c-3127f8200af4.png" className="h-10 mr-2 object-cover" />
+          
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -36,22 +28,12 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-4">
-          <a 
-            href="https://wa.me/919154442611" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-primary hover:text-accent transition-colors flex items-center gap-2"
-          >
+          <a href="https://wa.me/919154442611" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors flex items-center gap-2">
             <WhatsappIcon className="w-5 h-5" />
             Chat with Us
           </a>
           
-          <a 
-            href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="primary-button flex items-center gap-2"
-          >
+          <a href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" target="_blank" rel="noopener noreferrer" className="primary-button flex items-center gap-2">
             <WhatsappIcon className="w-5 h-5" />
             Join Free Community
           </a>
@@ -69,22 +51,12 @@ const Navbar: React.FC = () => {
             <a href="#community" className="text-primary py-2 border-b border-gray-100">Community</a>
             <a href="#blog" className="text-primary py-2 border-b border-gray-100">Blog</a>
             
-            <a 
-              href="https://wa.me/919154442611" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-primary py-2 border-b border-gray-100 flex items-center gap-2"
-            >
+            <a href="https://wa.me/919154442611" target="_blank" rel="noopener noreferrer" className="text-primary py-2 border-b border-gray-100 flex items-center gap-2">
               <WhatsappIcon className="w-5 h-5" />
               Chat with Us
             </a>
             
-            <a 
-              href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="primary-button text-center mt-4 flex items-center justify-center gap-2"
-            >
+            <a href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" target="_blank" rel="noopener noreferrer" className="primary-button text-center mt-4 flex items-center justify-center gap-2">
               <WhatsappIcon className="w-5 h-5" />
               Join Free Community
             </a>
@@ -92,5 +64,4 @@ const Navbar: React.FC = () => {
         </div>}
     </nav>;
 };
-
 export default Navbar;
