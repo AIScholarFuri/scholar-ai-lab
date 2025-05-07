@@ -1,12 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { WhatsappIcon } from './icons/WhatsappIcon';
-
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -16,15 +13,10 @@ const Navbar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
   return <nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/90 shadow-sm backdrop-blur-md py-3" : "bg-transparent py-5")}>
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <a href="#" className="flex items-center">
-          <img 
-            alt="AI Scholar Logo" 
-            src="/lovable-uploads/c08e1f71-c2f4-49da-a28c-3127f8200af4.png" 
-            className="h-20 md:h-24 mr-2 object-cover" // Increased logo size
-          />
+          <img alt="AI Scholar Logo" src="/lovable-uploads/c08e1f71-c2f4-49da-a28c-3127f8200af4.png" className="h-40 md:h-24 mr-2 object-cover" />
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
