@@ -1,10 +1,7 @@
-
 import React, { useEffect, useRef } from 'react';
 import { WhatsappIcon } from './icons/WhatsappIcon';
-
 const CommunitySection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -13,18 +10,15 @@ const CommunitySection: React.FC = () => {
     }, {
       threshold: 0.1
     });
-    
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  
   return <section id="community" className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-8 reveal" ref={sectionRef}>
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -34,12 +28,7 @@ const CommunitySection: React.FC = () => {
               You don't have to do it alone. Our community supports you across every stage of your career.
               Founders, builders, professionals — all leveling up together.
             </p>
-            <a 
-              href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="primary-button inline-flex items-center gap-2"
-            >
+            <a href="https://chat.whatsapp.com/Ed1TnDysXkFG9y4RHJc2e5" target="_blank" rel="noopener noreferrer" className="primary-button inline-flex items-center gap-2">
               <WhatsappIcon className="w-5 h-5" />
               Join the AI Scholar Community
             </a>
@@ -48,18 +37,14 @@ const CommunitySection: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="glass-card p-8 rounded-2xl">
               <div className="grid grid-cols-4 gap-4">
-                {Array.from({length: 12}).map((_, index) => (
-                  <div 
-                    key={index} 
-                    className="aspect-square rounded-full overflow-hidden border-2 border-white" 
-                    style={{
-                      animationDelay: `${0.05 * index}s`,
-                      backgroundImage: `url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=100&h=100&fit=crop&crop=faces&q=80)`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
-                    }}
-                  ></div>
-                ))}
+                {Array.from({
+                length: 12
+              }).map((_, index) => <div key={index} className="aspect-square rounded-full overflow-hidden border-2 border-white" style={{
+                animationDelay: `${0.05 * index}s`,
+                backgroundImage: `url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=100&h=100&fit=crop&crop=faces&q=80)`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}></div>)}
               </div>
               
               <div className="mt-8 p-4 bg-primary-accent/20 rounded-xl">
@@ -69,7 +54,7 @@ const CommunitySection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-primary-DEFAULT font-medium mb-1">Latest Community Discussion</p>
-                    <p className="text-gray-600 text-sm">Join the conversation about AI ethics in content creation...</p>
+                    <p className="text-gray-600 text-sm">Join the conversation about AI in content creation...</p>
                   </div>
                 </div>
               </div>
@@ -79,5 +64,4 @@ const CommunitySection: React.FC = () => {
       </div>
     </section>;
 };
-
 export default CommunitySection;
