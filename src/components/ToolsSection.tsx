@@ -2,14 +2,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { MessageSquare, Video } from "lucide-react";
 
-type Category = 'image' | 'research' | 'development' | 'avatar';
+type Category = 'image' | 'research' | 'development' | 'avatar' | 'llm' | 'video';
 
 interface Tool {
   name: string;
   description: string;
   category: Category;
-  logo: string;
+  logo: string | React.ReactNode;
 }
 
 const tools: Tool[] = [
@@ -25,6 +26,19 @@ const tools: Tool[] = [
   { name: 'ElevenLabs', description: 'Voice cloning technology', category: 'avatar', logo: '/lovable-uploads/83c4b9d2-56df-4de5-aa30-a86052661a4e.png' },
   { name: 'HeyGen', description: 'AI video avatars', category: 'avatar', logo: '/lovable-uploads/5d37fa00-467c-4e22-a315-a277cac008b5.png' },
   { name: 'Synthesia', description: 'AI video generation', category: 'avatar', logo: '/lovable-uploads/0e86b8f8-6dbc-435b-ac0b-1dea3228d9a4.png' },
+  // Large Language Models
+  { name: 'ChatGPT', description: 'OpenAI\'s conversational AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
+  { name: 'Gemini', description: 'Google\'s multimodal AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
+  { name: 'DeepSeek', description: 'Advanced reasoning engine', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
+  // Video Generation
+  { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'Sora', description: 'OpenAI\'s text-to-video', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'Veo 2', description: 'Next-gen video synthesis', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'Runway', description: 'Creative video generation', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'HaiLuo', description: 'Cinematic AI videos', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'InVideo', description: 'Professional video creation', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'Higgsfield', description: 'Dynamic video rendering', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
+  { name: 'Luma Dream Machine', description: 'Dreamlike video effects', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
 ];
 
 const categories = [
@@ -32,6 +46,8 @@ const categories = [
   { id: 'research', name: 'Research & Writing' },
   { id: 'development', name: 'Web Development' },
   { id: 'avatar', name: 'AI Avatar & Voice' },
+  { id: 'llm', name: 'Large Language Models' },
+  { id: 'video', name: 'Video Generation' },
 ];
 
 const ToolsSection: React.FC = () => {
@@ -88,20 +104,26 @@ const ToolsSection: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredTools.map((tool) => (
+          {filteredTools.map((tool, index) => (
             <Card 
-              key={tool.name}
+              key={`${tool.name}-${index}`}
               className="glass-card p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-4 flex items-center justify-center">
-                  <AspectRatio ratio={1/1} className="relative overflow-hidden rounded-md">
-                    <img 
-                      src={tool.logo} 
-                      alt={`${tool.name} logo`} 
-                      className="object-contain w-full h-full"
-                    />
-                  </AspectRatio>
+                  {typeof tool.logo === 'string' ? (
+                    <AspectRatio ratio={1/1} className="relative overflow-hidden rounded-md">
+                      <img 
+                        src={tool.logo} 
+                        alt={`${tool.name} logo`} 
+                        className="object-contain w-full h-full"
+                      />
+                    </AspectRatio>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      {tool.logo}
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-lg font-bold text-primary mb-2">{tool.name}</h3>
                 <p className="text-gray-600 text-sm">{tool.description}</p>
