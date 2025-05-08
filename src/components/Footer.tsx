@@ -46,18 +46,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-primary font-bold mb-4">Subscribe to Newsletter</h3>
-            <p className="text-gray-600 mb-4">Stay updated with the latest in AI education and tools.</p>
-            <form>
-              <div className="flex">
-                <input type="email" placeholder="Your email address" className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
-                <button type="submit" className="px-4 py-2 rounded-r-lg transition-colors text-inherit bg-primary-accent">
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
+          
         </div>
         
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
