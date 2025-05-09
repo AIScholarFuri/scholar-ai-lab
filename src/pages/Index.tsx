@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import WhoIsItForSection from '@/components/WhoIsItForSection';
 import CoursesSection from '@/components/CoursesSection';
 import ToolsSection from '@/components/ToolsSection';
+import FAQSection from '@/components/FAQSection';
 import QuoteCarousel from '@/components/QuoteCarousel';
 import CommunitySection from '@/components/CommunitySection';
 import BlogSection from '@/components/BlogSection';
@@ -48,6 +49,7 @@ const Index: React.FC = () => {
       <WhoIsItForSection />
       <CoursesSection />
       <ToolsSection />
+      <FAQSection />
       <QuoteCarousel />
       <CommunitySection />
       <BlogSection />

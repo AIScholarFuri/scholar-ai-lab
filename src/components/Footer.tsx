@@ -1,7 +1,19 @@
+
 import React from 'react';
 import { Facebook, Youtube, Instagram } from 'lucide-react';
+
 const Footer: React.FC = () => {
-  return <footer className="bg-gray-50 py-16">
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return (
+    <footer className="bg-gray-50 py-16">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -21,32 +33,17 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/aischolartelugu" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary transition-colors transform hover:scale-110">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors transform hover:scale-110">
-                
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors transform hover:scale-110">
-                
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors transform hover:scale-110">
-                
-              </a>
             </div>
           </div>
-          
-          
           
           <div>
             <h3 className="text-primary font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
-              
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">Community</a></li>
               <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">AI Tools Directory</a></li>
-              
-              <li><a href="#" className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
+              <li><a href="#faqs" onClick={(e) => { e.preventDefault(); scrollToSection('faqs'); }} className="text-gray-600 hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
-          
-          
         </div>
         
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
@@ -61,6 +58,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
