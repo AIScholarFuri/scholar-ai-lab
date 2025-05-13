@@ -1,7 +1,11 @@
+
 import React, { useEffect, useRef } from 'react';
 import { WhatsappIcon } from './icons/WhatsappIcon';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
+
 const CommunitySection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -10,15 +14,34 @@ const CommunitySection: React.FC = () => {
     }, {
       threshold: 0.1
     });
+    
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
+    
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
+  
+  // Array of Indian person profile pictures - using diverse professional photos
+  const profileImages = [
+    "https://images.unsplash.com/photo-1618151313441-bc79b11e5090?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman professional
+    "https://images.unsplash.com/photo-1559571503-9b6c25c9fa8c?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man with glasses
+    "https://images.unsplash.com/photo-1631022955170-c6293cf266bf?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman smiling
+    "https://images.unsplash.com/photo-1519419166318-4f5c601b8e6c?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man professional
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman with saree
+    "https://images.unsplash.com/photo-1569128782402-d1ec5f20ed09?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man formal
+    "https://images.unsplash.com/photo-1615473787525-4227a09f8b7a?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman professional
+    "https://images.unsplash.com/photo-1627890331214-c1c7cdd1c66a?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man casual
+    "https://images.unsplash.com/photo-1548486840-69f6532a79e7?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman student
+    "https://images.unsplash.com/photo-1591189824978-91be2a47302d?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man tech
+    "https://images.unsplash.com/photo-1607789382281-1152591ec0da?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman business
+    "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?w=100&h=100&fit=crop&crop=faces&q=80"  // Indian man professional
+  ];
+  
   return <section id="community" className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-8 reveal" ref={sectionRef}>
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -37,14 +60,14 @@ const CommunitySection: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="glass-card p-8 rounded-2xl">
               <div className="grid grid-cols-4 gap-4">
-                {Array.from({
-                length: 12
-              }).map((_, index) => <div key={index} className="aspect-square rounded-full overflow-hidden border-2 border-white" style={{
-                animationDelay: `${0.05 * index}s`,
-                backgroundImage: `url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=100&h=100&fit=crop&crop=faces&q=80)`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}></div>)}
+                {profileImages.map((imageUrl, index) => (
+                  <Avatar key={index} className="border-2 border-white" style={{
+                    animationDelay: `${0.05 * index}s`
+                  }}>
+                    <AvatarImage src={imageUrl} alt={`Community member ${index + 1}`} />
+                    <AvatarFallback>{index + 1}</AvatarFallback>
+                  </Avatar>
+                ))}
               </div>
               
               <div className="mt-8 p-4 bg-primary-accent/20 rounded-xl">
@@ -64,4 +87,5 @@ const CommunitySection: React.FC = () => {
       </div>
     </section>;
 };
+
 export default CommunitySection;
