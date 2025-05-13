@@ -42,7 +42,7 @@ const tools: Tool[] = [
   { name: 'Suno', description: 'AI music generation', category: 'avatar', logo: <Music className="w-full h-full text-primary" /> },
   
   // Large Language Models
-  { name: 'ChatGPT', description: 'OpenAI\'s conversational AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
+  { name: 'GPT', description: 'OpenAI\'s conversational AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
   { name: 'Gemini', description: 'Google\'s multimodal AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
   { name: 'DeepSeek', description: 'Advanced reasoning engine', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
   { name: 'Claude', description: 'Anthropic\'s language model', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
