@@ -15,7 +15,7 @@ interface Tool {
 
 const tools: Tool[] = [
   // Image Generation
-  { name: 'Midjourney', description: 'Advanced image generation', category: 'image', logo: '/lovable-uploads/916c6db1-1fb7-409c-bfc1-7e50343dff90.png' },
+  { name: 'Midjourney', description: 'Advanced image generation', category: 'image', logo: '/lovable-uploads/f8795a0b-1876-42f2-a5a2-d768428adef9.png' },
   { name: 'Leonardo', description: 'AI-powered design assistant', category: 'image', logo: '/lovable-uploads/39325815-5a85-4691-a8f2-3a37808bbf03.png' },
   { name: 'DALL·E', description: 'OpenAI\'s image creator', category: 'image', logo: '/lovable-uploads/7ee30d8c-5a1a-4065-90e1-b6ffececa7dd.png' },
   { name: 'Flux', description: 'Next-gen image synthesis', category: 'image', logo: <Image className="w-full h-full text-primary" /> },
