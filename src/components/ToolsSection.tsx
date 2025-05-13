@@ -24,7 +24,7 @@ const tools: Tool[] = [
   // Research & Writing
   { name: 'Perplexity', description: 'AI research assistant', category: 'research', logo: '/lovable-uploads/45818f28-f44c-4b91-9e82-0f64cb1c933c.png' },
   { name: 'Claude', description: 'Anthropic\'s conversational AI', category: 'research', logo: '/lovable-uploads/fde4ae9e-11a0-4463-b32d-768e57a32b34.png' },
-  { name: 'Grok', description: 'Realtime information analysis', category: 'research', logo: '/lovable-uploads/0fae5fda-b45a-4879-ba97-64f87a27a7ad.png' },
+  { name: 'Grok', description: 'Realtime information analysis', category: 'research', logo: '/lovable-uploads/d0f984a5-d0b7-4004-ad5f-3bee841da26f.png' },
   { name: 'O3', description: 'Advanced research synthesis', category: 'research', logo: <Database className="w-full h-full text-primary" /> },
   { name: 'Deep Research', description: 'In-depth research tools', category: 'research', logo: <Database className="w-full h-full text-primary" /> },
   
@@ -47,7 +47,7 @@ const tools: Tool[] = [
   { name: 'DeepSeek', description: 'Advanced reasoning engine', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
   { name: 'Claude', description: 'Anthropic\'s language model', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
   { name: 'LLaMA', description: 'Meta\'s open language model', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
-  { name: 'Grok', description: 'X\'s conversational AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" /> },
+  { name: 'Grok', description: 'X\'s conversational AI', category: 'llm', logo: '/lovable-uploads/d0f984a5-d0b7-4004-ad5f-3bee841da26f.png' },
   
   // Video Generation
   { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" /> },
