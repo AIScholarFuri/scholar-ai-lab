@@ -29,14 +29,14 @@ const quotes: Quote[] = [
     text: "AI is already delivering profound benefits to humanity. It's not just the future — it's the present.",
     author: "Tim Cook",
     role: "Apple CEO",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    avatar: "/lovable-uploads/290a0c4b-6fb3-4b1a-b8e2-fbc9f78ba9ad.png"
   },
   {
     id: 4,
     text: "AI is one of the most important things humanity is working on. It's more profound than fire or electricity.",
     author: "Sundar Pichai",
     role: "Google CEO",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    avatar: "/lovable-uploads/5b2901ba-0d73-4a94-a58f-7d00762bd7e4.png"
   },
   {
     id: 5,
