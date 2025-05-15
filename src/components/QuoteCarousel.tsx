@@ -22,7 +22,7 @@ const quotes: Quote[] = [
     text: "We're in the golden age of AI. It's going to improve every aspect of our lives and business decisions.",
     author: "Jeff Bezos",
     role: "Amazon Founder",
-    avatar: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    avatar: "/lovable-uploads/e0b532b8-9548-4beb-9b39-357bf85834b0.png"
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const quotes: Quote[] = [
     text: "AI will be the best or worst thing ever for humanity. We need to use it wisely to unlock its full potential.",
     author: "Elon Musk",
     role: "Tesla/SpaceX CEO",
-    avatar: "https://images.unsplash.com/photo-1535868647677-300dbf3d78d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    avatar: "/lovable-uploads/bd428c94-0476-4fe9-ac90-cc01b568463d.png"
   }
 ];
 
