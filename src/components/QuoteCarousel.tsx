@@ -15,7 +15,7 @@ const quotes: Quote[] = [
     text: "AI is the defining technology of our time. It will transform every industry and reshape how we live and work.",
     author: "Satya Nadella",
     role: "Microsoft CEO",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+    avatar: "/lovable-uploads/b27df829-7490-4ecd-a055-7210d7ebc042.png"
   },
   {
     id: 2,
