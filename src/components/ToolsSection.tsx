@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -16,8 +15,8 @@ interface Tool {
 const tools: Tool[] = [
   // Image Generation
   { name: 'Midjourney', description: 'Advanced image generation', category: 'image', logo: '/lovable-uploads/f8795a0b-1876-42f2-a5a2-d768428adef9.png' },
-  { name: 'Leonardo', description: 'AI-powered design assistant', category: 'image', logo: '/lovable-uploads/39325815-5a85-4691-a8f2-3a37808bbf03.png' },
-  { name: 'DALL·E', description: 'OpenAI\'s image creator', category: 'image', logo: '/lovable-uploads/7ee30d8c-5a1a-4065-90e1-b6ffececa7dd.png' },
+  { name: 'Leonardo', description: 'AI-powered design assistant', category: 'image', logo: '/lovable-uploads/3de02a15-8679-4931-b8ed-229294ff83e8.png' },
+  { name: 'DALL·E', description: 'OpenAI\'s image creator', category: 'image', logo: '/lovable-uploads/6eb93428-9f94-43c3-b378-bc8d818d9641.png' },
   { name: 'Flux', description: 'Next-gen image synthesis', category: 'image', logo: <Image className="w-full h-full text-primary" /> },
   { name: 'Reve', description: 'Creative image generation', category: 'image', logo: <Image className="w-full h-full text-primary" /> },
   
