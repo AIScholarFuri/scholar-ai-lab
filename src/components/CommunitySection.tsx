@@ -59,25 +59,30 @@ const CommunitySection: React.FC = () => {
           
           <div className="lg:w-1/2">
             <div className="glass-card p-8 rounded-2xl">
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-6 mb-8">
                 {profileImages.map((imageUrl, index) => (
-                  <Avatar key={index} className="border-2 border-white" style={{
-                    animationDelay: `${0.05 * index}s`
-                  }}>
-                    <AvatarImage src={imageUrl} alt={`Community member ${index + 1}`} />
-                    <AvatarFallback>{index + 1}</AvatarFallback>
-                  </Avatar>
+                  <div key={index} className="flex justify-center">
+                    <Avatar 
+                      className="w-16 h-16 border-2 border-white shadow-lg" 
+                      style={{
+                        animationDelay: `${0.05 * index}s`
+                      }}
+                    >
+                      <AvatarImage src={imageUrl} alt={`Community member ${index + 1}`} />
+                      <AvatarFallback>{index + 1}</AvatarFallback>
+                    </Avatar>
+                  </div>
                 ))}
               </div>
               
-              <div className="mt-8 p-4 bg-primary-accent/20 rounded-xl">
+              <div className="p-5 bg-primary-accent/20 rounded-xl">
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4 flex-shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" /><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" /></svg>
                   </div>
                   <div>
-                    <p className="text-primary-DEFAULT font-medium mb-1">Latest Community Discussion</p>
-                    <p className="text-gray-600 text-sm">Join the conversation about AI in content creation...</p>
+                    <p className="text-primary-DEFAULT font-medium mb-2 text-lg">Latest Community Discussion</p>
+                    <p className="text-gray-600">Join the conversation about AI in content creation...</p>
                   </div>
                 </div>
               </div>

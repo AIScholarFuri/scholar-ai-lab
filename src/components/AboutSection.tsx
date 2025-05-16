@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
           <div className="md:w-1/2 w-full">
             <div className="glass-card p-4 md:p-8 rounded-2xl overflow-hidden">
               <AspectRatio ratio={16/9}>
-                <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952')] bg-cover bg-center rounded-lg"></div>
+                <div className="h-full w-full bg-[url('/lovable-uploads/9d9d392e-2dc9-410a-bb01-59f551bb4f39.png')] bg-cover bg-center rounded-lg"></div>
               </AspectRatio>
             </div>
           </div>
