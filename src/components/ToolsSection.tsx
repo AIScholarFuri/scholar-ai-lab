@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -31,7 +30,7 @@ const tools: Tool[] = [
   
   // Web Development
   { name: 'Lovable', description: 'AI-powered web development', category: 'development', logo: '/lovable-uploads/1aec2bbb-3aa1-44e7-8758-e6ba77f6c20f.png', url: 'https://lovable.app' },
-  { name: 'Bolt', description: 'Rapid prototyping with AI', category: 'development', logo: '/lovable-uploads/5efe0a14-1acd-42e6-8f17-ae4c4a9c456c.png', url: 'https://www.https://bolt.new' },
+  { name: 'Bolt', description: 'Rapid prototyping with AI', category: 'development', logo: '/lovable-uploads/5efe0a14-1acd-42e6-8f17-ae4c4a9c456c.png', url: 'https://www.bolt.new' },
   { name: 'Replit', description: 'Collaborative coding with AI', category: 'development', logo: '/lovable-uploads/b494d212-1447-49c5-8781-696182d563fd.png', url: 'https://replit.com' },
   { name: 'Cursor', description: 'AI-enhanced code editor', category: 'development', logo: <Code className="w-full h-full text-primary" />, url: 'https://cursor.sh' },
   { name: 'Windsurf', description: 'Modern web framework tools', category: 'development', logo: <Code className="w-full h-full text-primary" />, url: 'https://windsurf.dev' },
@@ -51,7 +50,7 @@ const tools: Tool[] = [
   { name: 'Grok', description: 'X\'s conversational AI', category: 'llm', logo: '/lovable-uploads/d0f984a5-d0b7-4004-ad5f-3bee841da26f.png', url: 'https://grok.x.ai' },
   
   // Video Generation
-  { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://www.https://klingai.com' },
+  { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://www.klingai.com' },
   { name: 'Sora', description: 'OpenAI\'s text-to-video', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://openai.com/sora' },
   { name: 'Veo 2', description: 'Next-gen video synthesis', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://deepmind.google/technologies/veo/' },
   { name: 'Runway', description: 'Creative video generation', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://runwayml.com' },
