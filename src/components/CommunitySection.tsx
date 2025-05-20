@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import { WhatsappIcon } from './icons/WhatsappIcon';
-import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const CommunitySection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -26,22 +25,6 @@ const CommunitySection: React.FC = () => {
     };
   }, []);
   
-  // Array of Indian person profile pictures - using diverse professional photos
-  const profileImages = [
-    "https://images.unsplash.com/photo-1618151313441-bc79b11e5090?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman professional
-    "https://images.unsplash.com/photo-1559571503-9b6c25c9fa8c?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man with glasses
-    "https://images.unsplash.com/photo-1631022955170-c6293cf266bf?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman smiling
-    "https://images.unsplash.com/photo-1519419166318-4f5c601b8e6c?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man professional
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman with saree
-    "https://images.unsplash.com/photo-1569128782402-d1ec5f20ed09?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man formal
-    "https://images.unsplash.com/photo-1615473787525-4227a09f8b7a?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman professional
-    "https://images.unsplash.com/photo-1627890331214-c1c7cdd1c66a?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man casual
-    "https://images.unsplash.com/photo-1548486840-69f6532a79e7?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman student
-    "https://images.unsplash.com/photo-1591189824978-91be2a47302d?w=100&h=100&fit=crop&crop=faces&q=80", // Indian man tech
-    "https://images.unsplash.com/photo-1607789382281-1152591ec0da?w=100&h=100&fit=crop&crop=faces&q=80", // Indian woman business
-    "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?w=100&h=100&fit=crop&crop=faces&q=80"  // Indian man professional
-  ];
-  
   return <section id="community" className="py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-8 reveal" ref={sectionRef}>
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -59,20 +42,18 @@ const CommunitySection: React.FC = () => {
           
           <div className="lg:w-1/2">
             <div className="glass-card p-8 rounded-2xl">
-              <div className="grid grid-cols-3 md:grid-cols-4 gap-6 mb-8">
-                {profileImages.map((imageUrl, index) => (
-                  <div key={index} className="flex justify-center">
-                    <Avatar 
-                      className="w-16 h-16 border-2 border-white shadow-lg" 
-                      style={{
-                        animationDelay: `${0.05 * index}s`
-                      }}
-                    >
-                      <AvatarImage src={imageUrl} alt={`Community member ${index + 1}`} />
-                      <AvatarFallback>{index + 1}</AvatarFallback>
-                    </Avatar>
+              {/* Image placeholder for community representation */}
+              <div className="aspect-w-16 aspect-h-9 mb-8">
+                <div className="w-full h-full bg-gray-200 rounded-xl flex items-center justify-center">
+                  <div className="text-center p-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-3 text-gray-400">
+                      <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0Z"></path>
+                      <circle cx="12" cy="8" r="2"></circle>
+                    </svg>
+                    <p className="text-gray-500">Community Image Placeholder</p>
+                    <p className="text-sm text-gray-400 mt-1">Place your custom community image here</p>
                   </div>
-                ))}
+                </div>
               </div>
               
               <div className="p-5 bg-primary-accent/20 rounded-xl">

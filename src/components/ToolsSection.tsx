@@ -19,8 +19,8 @@ const tools: Tool[] = [
   { name: 'Midjourney', description: 'Advanced image generation', category: 'image', logo: '/lovable-uploads/f8795a0b-1876-42f2-a5a2-d768428adef9.png', url: 'https://www.midjourney.com' },
   { name: 'Leonardo', description: 'AI-powered design assistant', category: 'image', logo: '/lovable-uploads/3de02a15-8679-4931-b8ed-229294ff83e8.png', url: 'https://leonardo.ai' },
   { name: 'DALL·E', description: 'OpenAI\'s image creator', category: 'image', logo: '/lovable-uploads/6eb93428-9f94-43c3-b378-bc8d818d9641.png', url: 'https://openai.com/dall-e/' },
-  { name: 'Flux', description: 'Next-gen image synthesis', category: 'image', logo: <Image className="w-full h-full text-primary" />, url: 'https://flux.ai' },
-  { name: 'Reve', description: 'Creative image generation', category: 'image', logo: <Image className="w-full h-full text-primary" />, url: 'https://reve.ai' },
+  { name: 'Flux', description: 'Next-gen image synthesis', category: 'image', logo: <Image className="w-full h-full text-primary" />, url: 'https://www.flux-ai.io' },
+  { name: 'Reve', description: 'Creative image generation', category: 'image', logo: <Image className="w-full h-full text-primary" />, url: 'https://www.reve.art' },
   
   // Research & Writing
   { name: 'Perplexity', description: 'AI research assistant', category: 'research', logo: '/lovable-uploads/45818f28-f44c-4b91-9e82-0f64cb1c933c.png', url: 'https://www.perplexity.ai' },
@@ -31,7 +31,7 @@ const tools: Tool[] = [
   
   // Web Development
   { name: 'Lovable', description: 'AI-powered web development', category: 'development', logo: '/lovable-uploads/1aec2bbb-3aa1-44e7-8758-e6ba77f6c20f.png', url: 'https://lovable.app' },
-  { name: 'Bolt', description: 'Rapid prototyping with AI', category: 'development', logo: '/lovable-uploads/5efe0a14-1acd-42e6-8f17-ae4c4a9c456c.png', url: 'https://wix.com/bolt' },
+  { name: 'Bolt', description: 'Rapid prototyping with AI', category: 'development', logo: '/lovable-uploads/5efe0a14-1acd-42e6-8f17-ae4c4a9c456c.png', url: 'https://www.https://bolt.new' },
   { name: 'Replit', description: 'Collaborative coding with AI', category: 'development', logo: '/lovable-uploads/b494d212-1447-49c5-8781-696182d563fd.png', url: 'https://replit.com' },
   { name: 'Cursor', description: 'AI-enhanced code editor', category: 'development', logo: <Code className="w-full h-full text-primary" />, url: 'https://cursor.sh' },
   { name: 'Windsurf', description: 'Modern web framework tools', category: 'development', logo: <Code className="w-full h-full text-primary" />, url: 'https://windsurf.dev' },
@@ -45,13 +45,13 @@ const tools: Tool[] = [
   // Large Language Models
   { name: 'GPT', description: 'OpenAI\'s conversational AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://chat.openai.com' },
   { name: 'Gemini', description: 'Google\'s multimodal AI', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://gemini.google.com' },
-  { name: 'DeepSeek', description: 'Advanced reasoning engine', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://deepseek.ai' },
+  { name: 'DeepSeek', description: 'Advanced reasoning engine', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://www.chat.deepseek.com' },
   { name: 'Claude', description: 'Anthropic\'s language model', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://claude.ai' },
   { name: 'LLaMA', description: 'Meta\'s open language model', category: 'llm', logo: <MessageSquare className="w-full h-full text-primary" />, url: 'https://llama.meta.com' },
   { name: 'Grok', description: 'X\'s conversational AI', category: 'llm', logo: '/lovable-uploads/d0f984a5-d0b7-4004-ad5f-3bee841da26f.png', url: 'https://grok.x.ai' },
   
   // Video Generation
-  { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://kling.ai' },
+  { name: 'Kling', description: 'Video creation assistant', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://www.https://klingai.com' },
   { name: 'Sora', description: 'OpenAI\'s text-to-video', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://openai.com/sora' },
   { name: 'Veo 2', description: 'Next-gen video synthesis', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://deepmind.google/technologies/veo/' },
   { name: 'Runway', description: 'Creative video generation', category: 'video', logo: <Video className="w-full h-full text-primary" />, url: 'https://runwayml.com' },
